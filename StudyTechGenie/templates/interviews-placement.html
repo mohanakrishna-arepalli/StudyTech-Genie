@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interview & Placement Resources</title>
+    <link rel="stylesheet" href="../static/css/theme.css" />
+    <style>
+      df-messenger {
+        position: fixed;
+        bottom: 16px; /* Adjust for desired vertical spacing */
+        right: 16px; /* Adjust for desired horizontal spacing */
+        z-index: 999; /* Ensure chatbox stays on top */
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      h2 {
+        border-bottom: 2px solid;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      a {
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-toggle-button" onclick="toggleTheme()">
+      Toggle Theme
+    </button>
+    <div class="container">
+      <h1>Interview & Placement Resources</h1>
+
+      <h2>Resume and Cover Letter Writing:</h2>
+      <ul>
+        <li>
+          <a
+            href="https://www.thebalancecareers.com/how-to-write-a-resume-2063334"
+            >How to Write a Resume</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.thebalancecareers.com/how-to-write-a-cover-letter-2060169"
+            >How to Write a Cover Letter</a
+          >
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Interview Preparation:</h2>
+      <ul>
+        <li>
+          <a
+            href="https://www.glassdoor.com/blog/guide/how-to-prepare-for-an-interview/"
+            >Glassdoor Interview Preparation Guide</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.indeed.com/career-advice/interviewing/interview-tips"
+            >Indeed Interview Tips</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.monster.com/career-advice/article/interview-preparation-tips"
+            >Monster Interview Preparation Tips</a
+          >
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Technical Interview Preparation:</h2>
+      <ul>
+        <li>
+          <a href="https://leetcode.com/">LeetCode</a>
+        </li>
+        <li>
+          <a
+            href="https://www.hackerrank.com/interview/interview-preparation-kit"
+            >HackerRank Interview Preparation Kit</a
+          >
+        </li>
+        <li>
+          <a href="https://www.interviewbit.com/">InterviewBit</a>
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Behavioral Interview Preparation:</h2>
+      <ul>
+        <li>
+          <a href="https://biginterview.com/behavioral-interview-questions/"
+            >Big Interview Behavioral Questions</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.themuse.com/advice/30-behavioral-interview-questions-you-should-be-ready-to-answer"
+            >30 Behavioral Interview Questions</a
+          >
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Online Courses and Videos:</h2>
+      <ul>
+        <li>
+          <a
+            href="https://www.coursera.org/courses?query=interview%20preparation"
+            >Coursera - Interview Preparation Courses</a
+          >
+        </li>
+        <li>
+          <a href="https://www.udemy.com/topic/interview-preparation/"
+            >Udemy - Interview Preparation Courses</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/results?search_query=interview+preparation"
+            >YouTube - Interview Preparation Videos</a
+          >
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Mock Interviews:</h2>
+      <ul>
+        <li>
+          <a href="https://www.pramp.com/">Pramp - Free Mock Interviews</a>
+        </li>
+        <li>
+          <a href="https://interviewing.io/"
+            >Interviewing.io - Mock Technical Interviews</a
+          >
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Job Portals:</h2>
+      <ul>
+        <li>
+          <a href="https://www.linkedin.com/jobs/">LinkedIn Jobs</a>
+        </li>
+        <li>
+          <a href="https://www.indeed.com/">Indeed</a>
+        </li>
+        <li>
+          <a href="https://www.glassdoor.com/index.htm">Glassdoor</a>
+        </li>
+      </ul>
+    </div>
+    <df-messenger
+      project-id="gen-lang-client-0994690967"
+      agent-id="0ea62fa0-9b93-4317-aad6-ab921b704507"
+      language-code="en"
+      max-query-length="-1"
+    >
+      <df-messenger-chat-bubble
+        chat-title="Genie 🧞‍♂️"
+      ></df-messenger-chat-bubble>
+    </df-messenger>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <script>
+      function toggleTheme() {
+        const currentTheme =
+          document.documentElement.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme); // Save preference
+      }
+
+      function loadThemePreference() {
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+
+      document.addEventListener("DOMContentLoaded", loadThemePreference);
+    </script>
+  </body>
+</html>

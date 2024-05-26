@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus Timer</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.css"
+    />
+    <style>
+      .theme-toggle-button {
+        position: fixed;
+        top: 16px;
+        right: 16px;
+        padding: 10px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .theme-toggle-button:hover {
+        background-color: #45a049;
+      }
+      body {
+        background: url("../static/img/image.png") no-repeat center center fixed;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .pomodoro {
+        width: 500px;
+        padding-top: 15px;
+        padding-bottom: 25px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .counter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn {
+        background-color: #333333;
+        color: #cccccc;
+      }
+      #sessInc,
+      #sessDec,
+      #breakInc,
+      #breakDec {
+        font-weight: bold;
+      }
+      #stats {
+        background-color: #333333;
+        width: 220px;
+        height: 70px;
+        border-radius: 10px;
+        color: #cccccc;
+        font-size: 45px;
+        text-align: center;
+        margin: 0 auto;
+      }
+      #btns {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      #btns button {
+        margin: 0 10px;
+      }
+      .timer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 48px;
+        font-weight: bold;
+      }
+      .middle {
+        display: flex;
+        align-items: baseline;
+      }
+      #minutes,
+      #seconds {
+        padding: 0 5px;
+      }
+    </style>
+    <script>
+      function toggleTheme() {
+        const currentTheme =
+          document.documentElement.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme); // Save preference
+
+        // Change background image URL based on the selected theme
+        const backgroundImageURL =
+          newTheme === "dark"
+            ? "url('../static/img/img1.jpeg')"
+            : "url('../static/img/image.png')";
+        document.body.style.background =
+          backgroundImageURL + " no-repeat center center fixed";
+        document.body.style.backgroundSize = "cover";
+      }
+
+      function playTimerSound() {
+        const timerSound = new Audio("../static/sounds/timer_sound.mp3");
+        timerSound.play();
+      }
+    </script>
+  </head>
+  <body>
+    <button class="theme-toggle-button" onclick="toggleTheme()">
+      Toggle Theme
+    </button>
+    <div class="container">
+      <div class="pomodoro">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row justify-content-center"><p>Session Length</p></div>
+            <div class="row counter">
+              <div class="col-md-4">
+                <button class="btn btn-default" id="sessDec">-</button>
+              </div>
+              <div class="col-md-2">
+                <div id="session">25</div>
+              </div>
+              <div class="col-md-4">
+                <button class="btn btn-default" id="sessInc">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row justify-content-center"><p>Break Length</p></div>
+            <div class="row counter">
+              <div class="col-md-4">
+                <button class="btn btn-default" id="breakDec">-</button>
+              </div>
+              <div class="col-md-2">
+                <div id="break">5</div>
+              </div>
+              <div class="col-md-4">
+                <button class="btn btn-default" id="breakInc">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="clock" class="row">
+          <div class="timer">
+            <div class="middle">
+              <span id="minutes">00</span>:<span id="seconds">00</span>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center" id="statRow">
+          <div id="stats">pomodoro</div>
+        </div>
+        <div class="row justify-content-center" id="btns">
+          <button class="btn btn-default btn-lg" id="start">Start</button>
+          <button class="btn btn-default btn-lg" id="stop">Stop</button>
+          <button class="btn btn-default btn-lg" id="clear">Clear</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        var countS = 25;
+        $("#session").html(countS);
+        var countB = 5;
+        $("#break").html(countB);
+        var pos = "pomodoro";
+        var countLama;
+        var posLama;
+        var count;
+        $("#stats").html(pos);
+        var clock = $(".timer").FlipClock(0, {
+          countdown: true,
+          clockFace: "MinuteCounter",
+          autoStart: false,
+          callbacks: {
+            interval: function () {
+              if (clock.getTime() == 0) {
+                playTimerSound(); // Play the sound when the timer reaches zero
+                if (pos == "session") {
+                  clock.setTime(countB * 60);
+                  clock.start();
+                  pos = "break";
+                  $("#stats").html(pos);
+                } else if (pos == "break") {
+                  clock.setTime(countS * 60);
+                  clock.start();
+                  pos = "session";
+                  $("#stats").html(pos);
+                }
+              }
+            },
+          },
+        });
+
+        // Session
+        $("#sessInc").on("click", function () {
+          if ($("#session").html() > 0) {
+            countS = parseInt($("#session").html());
+            countS += 1;
+            $("#session").html(countS);
+          }
+        });
+
+        $("#sessDec").on("click", function () {
+          if ($("#session").html() > 1) {
+            countS = parseInt($("#session").html());
+            countS -= 1;
+            $("#session").html(countS);
+          }
+        });
+
+        // Break
+        $("#breakInc").on("click", function () {
+          if ($("#break").html() > 0) {
+            countB = parseInt($("#break").html());
+            countB += 1;
+            $("#break").html(countB);
+          }
+        });
+
+        $("#breakDec").on("click", function () {
+          if ($("#break").html() > 1) {
+            countB = parseInt($("#break").html());
+            countB -= 1;
+            $("#break").html(countB);
+          }
+        });
+
+        $("#start").on("click", function () {
+          if (count != countS || clock.getTime() == 0) {
+            clock.setTime(countS * 60);
+            pos = "session";
+            $("#stats").html(pos);
+          } else {
+            pos = posLama;
+            $("#stats").html(pos);
+          }
+          count = countS;
+          clock.start();
+        });
+
+        $("#stop").on("click", function () {
+          clock.stop();
+          countLama = clock.getTime();
+          posLama = $("#stats").html();
+        });
+
+        $("#clear").on("click", function () {
+          clock.stop();
+          pos = "pomodoro";
+          $("#stats").html(pos);
+          clock.setTime(0);
+        });
+
+        // Remove text above clock
+        $(".flip-clock-label").remove();
+      });
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css"
+    />
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <df-messenger
+      project-id="our-monolith-423109-a7"
+      agent-id="841028ea-5587-446a-8b85-836d047d27c1"
+      language-code="en"
+      max-query-length="-1"
+    >
+      <df-messenger-chat-bubble chat-title=""> </df-messenger-chat-bubble>
+    </df-messenger>
+    <style>
+      df-messenger {
+        z-index: 999;
+        position: fixed;
+        --df-messenger-font-color: #000;
+        --df-messenger-font-family: Google Sans;
+        --df-messenger-chat-background: #f3f6fc;
+        --df-messenger-message-user-background: #d3e3fd;
+        --df-messenger-message-bot-background: #fff;
+        bottom: 16px;
+        right: 16px;
+      }
+    </style>
+  </body>
+</html>

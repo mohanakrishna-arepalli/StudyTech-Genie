@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GATE Resources</title>
+    <style>
+      df-messenger {
+        position: fixed;
+        bottom: 16px; /* Adjust for desired vertical spacing */
+        right: 16px; /* Adjust for desired horizontal spacing */
+        z-index: 999; /* Ensure chatbox stays on top */
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        color: var(--heading-color); /* Updated color */
+        margin-bottom: 20px;
+      }
+      h2 {
+        color: var(--subheading-color); /* Updated color */
+        border-bottom: 2px solid var(--subheading-color); /* Updated color */
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      a {
+        text-decoration: none;
+        color: var(--link-color); /* Updated color */
+        transition: color 0.3s ease-in-out;
+        display: inline-block;
+      }
+      a:hover {
+        color: var(--link-hover-color); /* Updated color */
+      }
+    </style>
+    <link rel="stylesheet" href="../static/css/theme.css" />
+  </head>
+  <body>
+    <button class="theme-toggle-button" onclick="toggleTheme()">
+      Toggle Theme
+    </button>
+    <div class="container">
+      <h1>GATE Resources</h1>
+
+      <h2>Official GATE Website:</h2>
+      <ul>
+        <li>
+          <a href="http://gate.iitb.ac.in/">GATE 2024 Official Website</a>
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Preparation Materials:</h2>
+      <ul>
+        <li>
+          <a href="https://byjus.com/gate/previous-year-question-papers/"
+            >GATE Previous Year Question Papers</a
+          >
+        </li>
+        <li>
+          <a href="https://byjus.com/gate/gate-syllabus/">GATE Syllabus</a>
+        </li>
+        <li>
+          <a href="https://byjus.com/gate/gate-exam-pattern/"
+            >GATE Exam Pattern</a
+          >
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Books and Study Materials:</h2>
+      <ul>
+        <li><a href="https://www.gateacademy.shop/">GATE Academy</a></li>
+        <li>
+          <a href="https://www.madeeasypublications.org/"
+            >Made Easy Publications</a
+          >
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Online Courses and Videos:</h2>
+      <ul>
+        <li>
+          <a href="https://nptel.ac.in/noc/">NPTEL GATE Preparation Courses</a>
+        </li>
+        <li>
+          <a href="https://www.coursera.org/search?query=GATE%20preparation"
+            >Coursera - GATE Preparation Courses</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/results?search_query=GATE+preparation"
+            >YouTube - GATE Lectures</a
+          >
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Mock Tests and Practice Questions:</h2>
+      <ul>
+        <li>
+          <a
+            href="https://in.prorateer.com/ws?q=gate%20mock%20test%20online%20free&asid=prr_vbb_camp_412&nw=s&de=c&locale=en_IN&ac=41439&cid=21083430943&aid=162661142067&kid=kwd-298418947411&vclid=EAIaIQobChMIx-Lcu6-phgMVf6dmAh343AVOEAAYBCAAEgI5z_D_BwE&antcl=728&gad_source=5&gclid=EAIaIQobChMIx-Lcu6-phgMVf6dmAh343AVOEAAYBCAAEgI5z_D_BwE"
+            >GATE Online Test Series</a
+          >
+        </li>
+        <li>
+          <a href="https://testbook.com/gate/mock-test"
+            >Testbook GATE Mock Tests</a
+          >
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Forums and Communities:</h2>
+      <ul>
+        <li><a href="https://gateoverflow.in/">GateOverflow</a></li>
+        <li>
+          <a href="https://www.crazyengineers.com/forums/gate-exam.17/"
+            >CrazyEngineers GATE Forum</a
+          >
+        </li>
+        <li><a href="https://www.reddit.com/r/gate/">Reddit - r/GATE</a></li>
+      </ul>
+
+      <hr />
+
+      <h2>Mobile Apps:</h2>
+      <ul>
+        <li>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.gatevirtualcalculator.gatevirtualcalculator&hl=en"
+            >GATE Virtual Calculator App (Android)</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://play.google.com/store/apps/details?id=co.gradeup.android&hl=en_IN&gl=US"
+            >Gradeup - GATE & ESE Prep App (Android)</a
+          >
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Official Social Media Handles:</h2>
+      <ul>
+        <li><a href="https://twitter.com/GATE_ME_IITB">GATE on Twitter</a></li>
+        <li>
+          <a href="https://www.facebook.com/GATEExamOfficial"
+            >GATE on Facebook</a
+          >
+        </li>
+      </ul>
+    </div>
+    <df-messenger
+      project-id="gen-lang-client-0994690967"
+      agent-id="0ea62fa0-9b93-4317-aad6-ab921b704507"
+      language-code="en"
+      max-query-length="-1"
+    >
+      <df-messenger-chat-bubble chat-title="Genie 🧞‍♂️">
+      </df-messenger-chat-bubble>
+    </df-messenger>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <script>
+      function toggleTheme() {
+        const currentTheme =
+          document.documentElement.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme); // Save preference
+      }
+
+      function loadThemePreference() {
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+
+      document.addEventListener("DOMContentLoaded", loadThemePreference);
+    </script>
+  </body>
+</html>

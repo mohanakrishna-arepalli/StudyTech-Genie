@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Science Resources</title>
+    <link rel="stylesheet" href="../static/css/theme.css" />
+    <style>
+      /* Additional styles specific to this page */
+      df-messenger {
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+        z-index: 999;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      h2 {
+        border-bottom: 2px solid;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      a {
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+        display: inline-block;
+      }
+      .theme-toggle-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-toggle-button" onclick="toggleTheme()">
+      Toggle Theme
+    </button>
+    <div class="container">
+      <h1>Data Science Resources</h1>
+
+      <h2>Courses:</h2>
+      <ul>
+        <li>
+          <a href="https://www.coursera.org/specializations/jhu-data-science"
+            >Coursera - Data Science Specialization</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.udacity.com/course/data-scientist-nanodegree--nd025"
+            >Udacity - Data Scientist Nanodegree</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.edx.org/professional-certificate/harvardx-data-science"
+            >edX - HarvardX Data Science Professional Certificate</a
+          >
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Books:</h2>
+      <ul>
+        <li>
+          <a
+            href="https://www.oreilly.com/library/view/data-science-from/9781492041122/"
+            >Data Science from Scratch by Joel Grus</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.oreilly.com/library/view/python-data-science/9781491912126/"
+            >Python Data Science Handbook by Jake VanderPlas</a
+          >
+        </li>
+        <li>
+          <a href="https://www.manning.com/books/deep-learning-with-python"
+            >Deep Learning with Python by François Chollet</a
+          >
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Online Resources:</h2>
+      <ul>
+        <li><a href="https://www.kaggle.com/">Kaggle</a></li>
+        <li>
+          <a href="https://towardsdatascience.com/">Towards Data Science</a>
+        </li>
+        <li><a href="https://www.datacamp.com/">DataCamp</a></li>
+      </ul>
+
+      <hr />
+
+      <h2>Videos and Tutorials:</h2>
+      <ul>
+        <li>
+          <a href="https://www.youtube.com/user/dataschool"
+            >Data School YouTube Channel</a
+          >
+        </li>
+        <li>
+          <a href="https://www.youtube.com/user/JomaOppa"
+            >Joma Tech YouTube Channel</a
+          >
+        </li>
+        <li>
+          <a href="https://www.youtube.com/channel/UCbDHUt4RXn0cY_Ik_keb5AQ"
+            >StatQuest with Josh Starmer</a
+          >
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Communities:</h2>
+      <ul>
+        <li>
+          <a href="https://www.reddit.com/r/datascience/"
+            >Reddit - Data Science</a
+          >
+        </li>
+        <li><a href="https://www.kaggle.com/discussion">Kaggle Forums</a></li>
+        <li><a href="https://www.datatau.com/">DataTau</a></li>
+      </ul>
+
+      <hr />
+
+      <h2>Tools and Libraries:</h2>
+      <ul>
+        <li><a href="https://pandas.pydata.org/">Pandas</a></li>
+        <li><a href="https://scikit-learn.org/">Scikit-learn</a></li>
+        <li><a href="https://www.tensorflow.org/">TensorFlow</a></li>
+      </ul>
+    </div>
+    <df-messenger
+      project-id="gen-lang-client-0994690967"
+      agent-id="0ea62fa0-9b93-4317-aad6-ab921b704507"
+      language-code="en"
+      max-query-length="-1"
+    >
+      <df-messenger-chat-bubble
+        chat-title="Genie 🧞‍♂️"
+      ></df-messenger-chat-bubble>
+    </df-messenger>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <script>
+      function toggleTheme() {
+        const currentTheme =
+          document.documentElement.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme); // Save preference
+      }
+
+      function loadThemePreference() {
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+
+      document.addEventListener("DOMContentLoaded", loadThemePreference);
+    </script>
+  </body>
+</html>

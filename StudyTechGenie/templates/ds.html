@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Structures & Algorithms Resources</title>
+    <link rel="stylesheet" href="../static/css/theme.css" />
+    <style>
+      df-messenger {
+        position: fixed;
+        bottom: 16px; /* Adjust for desired vertical spacing */
+        right: 16px; /* Adjust for desired horizontal spacing */
+        z-index: 999; /* Ensure chatbox stays on top */
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      h2 {
+        border-bottom: 2px solid;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      a {
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-toggle-button" onclick="toggleTheme()">
+      Toggle Theme
+    </button>
+    <div class="container">
+      <h1>Data Structures & Algorithms Resources</h1>
+
+      <h2>Research Papers:</h2>
+      <ul>
+        <li>
+          <a
+            href="https://www.scribd.com/document/411053815/Data-Structure-Question-Paper-with-Answer-pdf"
+            >DSA Paper 2021</a
+          >
+        </li>
+        <li>
+          <a href="https://example.com/ds-papers/2020">DSA Paper 2020</a>
+        </li>
+        <li>
+          <a href="https://example.com/ds-papers/2019">DSA Paper 2019</a>
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Practice Questions:</h2>
+      <ul>
+        <li>
+          <a href="https://example.com/ds-practice/1">DSA Practice Set 1</a>
+        </li>
+        <li>
+          <a href="https://example.com/ds-practice/2">DSA Practice Set 2</a>
+        </li>
+        <li>
+          <a href="https://example.com/ds-practice/3">DSA Practice Set 3</a>
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Textbooks:</h2>
+      <ul>
+        <li>
+          <a href="https://example.com/textbooks/intro-to-algorithms"
+            >Introduction to Algorithms</a
+          >
+        </li>
+        <li>
+          <a href="https://example.com/textbooks/dsa-analysis-java"
+            >Data Structures and Algorithm Analysis in Java</a
+          >
+        </li>
+        <li>
+          <a href="https://example.com/textbooks/algorithms-book">Algorithms</a>
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Online Courses and Videos:</h2>
+      <ul>
+        <li>
+          <a href="https://www.youtube.com/watch?v=XXXXX">DSA Crash Course</a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=YYYYY"
+            >Data Structures in Python</a
+          >
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Additional Resources:</h2>
+      <ul>
+        <li>
+          <a href="https://www.geeksforgeeks.org/data-structures/"
+            >GeeksforGeeks - DSA</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.codecademy.com/learn/learn-data-structures-algorithms"
+            >Codecademy - Learn DSA</a
+          >
+        </li>
+      </ul>
+    </div>
+    <df-messenger
+      project-id="gen-lang-client-0994690967"
+      agent-id="0ea62fa0-9b93-4317-aad6-ab921b704507"
+      language-code="en"
+      max-query-length="-1"
+    >
+      <df-messenger-chat-bubble
+        chat-title="Genie 🧞‍♂️"
+      ></df-messenger-chat-bubble>
+    </df-messenger>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <script>
+      function toggleTheme() {
+        const currentTheme =
+          document.documentElement.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme); // Save preference
+      }
+
+      function loadThemePreference() {
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+
+      document.addEventListener("DOMContentLoaded", loadThemePreference);
+    </script>
+  </body>
+</html>
