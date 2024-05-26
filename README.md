@@ -15,4 +15,14 @@ StudyTech Genie is built using a combination of front-end and back-end technolog
 
 -FlipClock.js: The Focus Timer feature in StudyTech Genie is implemented using FlipClock.js, a JavaScript library for creating countdown timers with customizable features.
 
+# Features
+-Responsive Design: StudyTech Genie is designed to be responsive, offering optimal viewing and interaction experience across a wide range of devices.
+
+-Interactive Chat Assistance: Integration with Dialogflow enables users to interact with a chatbot for real-time assistance and information retrieval.
+
+-Focus Timer: The Focus Timer feature implements the Pomodoro Technique, helping users stay productive during study sessions by alternating between focused work periods and short breaks.
+
+-Theme Toggle: Users can switch between light and dark themes to customize their browsing experience based on their preferences.
+
+
 
