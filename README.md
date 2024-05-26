@@ -1,3 +1,15 @@
+# Table of Contents
+
+1. [StudyTech-Genie](#studytech-genie)
+2. [Technologies Used](#technologies-used)
+3. [Features](#features)
+4. [Introduction](#introduction)
+    - [GATE Page](#gate-page)
+    - [Focus Timer Page](#focus-timer-page)
+    - [Theme Toggle Feature](#theme-toggle-feature)
+5. [Chat Bot](#chat-bot)
+    - [Key Features of Genie🧞‍♂️ (Chat Bot)](#key-features-of-genie%EF%B8%8F-chat-bot))
+
 # StudyTech-Genie
 Unlocking Creativity Through Conversation: Your Personalized AI Assistant for Endless Possibilities.
 
@@ -8,6 +20,9 @@ StudyTech Genie is a web application designed to assist users in their exam prep
 StudyTech Genie is built using a combination of front-end and back-end technologies to ensure a seamless user experience and efficient functionality. The technologies used in this project include:
 
 -HTML/CSS/JavaScript: The front-end of StudyTech Genie is developed using HTML for structure, CSS for styling, and JavaScript for interactivity and dynamic behavior.
+
+-Flask:Implemented Flask, a micro web framework for Python, to handle server-side logic and routing.
+Flask allows for the creation of web applications in Python with minimal boilerplate code, making it efficient and lightweight.
 
 -Bootstrap: Bootstrap framework is utilized for responsive design, ensuring that StudyTech Genie is accessible and user-friendly across various devices and screen sizes.
 
@@ -25,7 +40,8 @@ StudyTech Genie is built using a combination of front-end and back-end technolog
 -Theme Toggle: Users can switch between light and dark themes to customize their browsing experience based on their preferences.
 
 # Introduction
-### Welcome to the homepage of our educational platform, designed to assist students in preparing for various examinations. This page serves as the central hub for accessing resources, including syllabi, study materials, and interactive tools to enhance your learning experience.
+## GATE Page
+Welcome to the homepage of our educational platform, designed to assist students in preparing for various examinations. This page serves as the central hub for accessing resources, including syllabi, study materials, and interactive tools to enhance your learning experience.
 
 <img width="1242" alt="Screenshot 2024-05-26 at 4 19 25 PM" src="https://github.com/mohanakrishna-arepalli/StudyTech-Genie/assets/101661844/f1baa950-1178-4b53-a5d7-f85da19037e8">
 
@@ -39,7 +55,8 @@ The home.html page of our educational platform serves as the central hub, provid
 <img width="1220" alt="Screenshot 2024-05-26 at 4 41 00 PM" src="https://github.com/mohanakrishna-arepalli/StudyTech-Genie/assets/101661844/2821430b-c05c-4748-b95c-e43f01c4d51d">
 
 
-### Welcome to the Focus Timer page, a dedicated tool designed to enhance your productivity and help you manage your study sessions efficiently.
+## Focus Timer Page
+Welcome to the Focus Timer page, a dedicated tool designed to enhance your productivity and help you manage your study sessions efficiently.
 
 Our Focus Timer employs the Pomodoro technique, a time management method that encourages you to work in focused intervals, typically 25 minutes, followed by a short break. This technique helps improve concentration, reduce mental fatigue, and boost overall productivity.
 
