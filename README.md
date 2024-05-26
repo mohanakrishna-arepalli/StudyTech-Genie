@@ -66,8 +66,18 @@ The chatbot is fed with data related to the GATE CSE syllabus, including topics 
 Users can ask specific questions related to these subjects and receive detailed, accurate responses.
 
 -Interactive Learning:
+
 The chatbot provides a conversational way to learn and review important topics.
 It can offer explanations, definitions, and even guide users through complex concepts interactively.
 
 -Resource Links:
 The chatbot can direct users to additional study materials, resources, and relevant links to aid their preparation.
+
+<img width="325" alt="Screenshot 2024-05-26 at 6 45 48 PM" src="https://github.com/mohanakrishna-arepalli/StudyTech-Genie/assets/101661844/322d0a4f-646a-4672-99af-8cea74dc44da">
+<img width="323" alt="Screenshot 2024-05-26 at 6 46 41 PM" src="https://github.com/mohanakrishna-arepalli/StudyTech-Genie/assets/101661844/a5e90b32-c5e1-4f69-a87e-591da2b23ace">
+<img width="320" alt="Screenshot 2024-05-26 at 6 48 18 PM" src="https://github.com/mohanakrishna-arepalli/StudyTech-Genie/assets/101661844/22b6d2de-87b2-4b93-b8df-edb7aff626fd">
+<img width="324" alt="Screenshot 2024-05-26 at 6 49 02 PM" src="https://github.com/mohanakrishna-arepalli/StudyTech-Genie/assets/101661844/d3f25505-bfae-4a9e-95de-c457675b3189">
+
+<img width="322" alt="Screenshot 2024-05-26 at 6 49 54 PM" src="https://github.com/mohanakrishna-arepalli/StudyTech-Genie/assets/101661844/54e87e44-662e-4fd7-a21d-9c3c28513d3e">
+<img width="323" alt="Screenshot 2024-05-26 at 6 50 01 PM" src="https://github.com/mohanakrishna-arepalli/StudyTech-Genie/assets/101661844/64c85e0f-f234-451e-be5b-ba5c65566641">
+
