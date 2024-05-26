@@ -40,12 +40,12 @@ Flask allows for the creation of web applications in Python with minimal boilerp
 -Theme Toggle: Users can switch between light and dark themes to customize their browsing experience based on their preferences.
 
 # Introduction
-## GATE Page
+
 Welcome to the homepage of our educational platform, designed to assist students in preparing for various examinations. This page serves as the central hub for accessing resources, including syllabi, study materials, and interactive tools to enhance your learning experience.
 
 <img width="1242" alt="Screenshot 2024-05-26 at 4 19 25 PM" src="https://github.com/mohanakrishna-arepalli/StudyTech-Genie/assets/101661844/f1baa950-1178-4b53-a5d7-f85da19037e8">
 
-
+## GATE Page
 The home.html page of our educational platform serves as the central hub, providing access to various pages dedicated to different subjects and exams. The GATE page is one of these specialized sections, specifically designed to support your preparation for the GATE (Graduate Aptitude Test in Engineering) examination.
 
 
