@@ -3,7 +3,7 @@ Unlocking Creativity Through Conversation: Your Personalized AI Assistant for En
 
 StudyTech Genie is a web application designed to assist users in their exam preparation journey by providing a comprehensive repository of resources and assistance across various subjects. Whether you're preparing for DS & Algorithms, Interviews & Placement, Data Science, GATE, Programming Languages, or Web Development, StudyTech Genie aims to streamline your preparation process.
 
-#Technologies Used
+# Technologies Used
 
 StudyTech Genie is built using a combination of front-end and back-end technologies to ensure a seamless user experience and efficient functionality. The technologies used in this project include:
 
