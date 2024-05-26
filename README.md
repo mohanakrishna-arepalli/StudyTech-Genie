@@ -8,7 +8,7 @@
     - [Focus Timer Page](#focus-timer-page)
     - [Theme Toggle Feature](#theme-toggle-feature)
 5. [Chat Bot](#chat-bot)
-    - [Key Features of Genie🧞‍♂️ (Chat Bot)](#key-features-of-genie%EF%B8%8F-chat-bot))
+    - [Key Features of Genie🧞‍♂️ (Chat Bot)](#key-features-of-genie%EF%B8%8F-chat-bot)
 
 # StudyTech-Genie
 Unlocking Creativity Through Conversation: Your Personalized AI Assistant for Endless Possibilities.
